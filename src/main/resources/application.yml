@@ -1,0 +1,45 @@
+#ConfigServer
+server:
+  port: 8888
+#配置数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hhrm?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+  # redis配置
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password:
+    # 连接超时时间
+    timeout: 10s
+
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+authority:
+  jwt:
+    header: token
+    expire: 10000
+    secret: qwndneansnanxnakxmanakanakxldlaids
+#这个地方需要自己修改
+files:
+  upload:
+    path: E:/code/prj/hhrm/file/file/
+
+#代码生成器相关配置
+generator:
+  author: "glb"

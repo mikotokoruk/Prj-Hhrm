@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.authority.mapper.StipendMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.authority.entity.Stipend">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="basic" property="basic" />
+        <result column="eat" property="eat" />
+        <result column="house" property="house" />
+        <result column="duty" property="duty" />
+        <result column="scot" property="scot" />
+        <result column="other" property="other" />
+    </resultMap>
+
+</mapper>
